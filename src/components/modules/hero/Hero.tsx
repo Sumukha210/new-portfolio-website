@@ -2,7 +2,7 @@ import useIsomorphicLayoutEffect from "@/utils/useIsomorphicEffect";
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { smokeSimulation } from "./SmokeEffect";
-import { Wrapper, Canvas, Container, Content } from "./styles";
+import { Wrapper, Canvas, Container, Content } from "./HeroStyles";
 
 const Hero = () => {
   const canvasRef = useRef(null);

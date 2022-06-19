@@ -16,6 +16,12 @@
     font-size: 3.157rem; // 50px
     line-height: 66.65px;
   }
+
+  &-3 {
+    @include headingStyles();
+    font-size: 2.369rem; // 37px
+    line-height: 50.52px;
+  }
 }
 
 // subtitle fonts
@@ -41,6 +47,6 @@
 
   &-5 {
     font-size: 1rem; // 16px
-    line-height: 20.11px;
+    line-height: 24.35px;
   }
 }

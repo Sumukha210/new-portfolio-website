@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Canvas = styled.canvas`
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   z-index: 3;
