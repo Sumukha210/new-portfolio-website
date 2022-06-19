@@ -23,6 +23,9 @@
       "@/modules/*": [
         "./src/components/modules/*"
       ],
+      "@/elements/*": [
+        "./src/components/elements/*"
+      ],
       "@/utils/*": [
         "./src/components/utils/*"
       ],

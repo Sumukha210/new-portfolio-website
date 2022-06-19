@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Wrapper } from "./AboutStyles";
 import NextImg from "next/image";
+import Title from "@/elements/Title";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
         <div className="inner-container">
           <Container>
             <div className="left">
-              <h2 className="heading-3 title">About Myself</h2>
+              <Title name="About Myself" />
               <p className="subtitle-5 description">
                 Hello! i’m Sumukha k b, i have a passion for creating designs
                 with code or better knows as a <span>Front End developer</span>.

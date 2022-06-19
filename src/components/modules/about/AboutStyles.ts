@@ -11,23 +11,6 @@ export const Container = styled.div`
   .left {
     color: var(--text-light);
 
-    .title {
-      margin-bottom: 2rem;
-      position: relative;
-      color: var(--secondary-color);
-
-      &::after {
-        content: "";
-        display: inline-block;
-        margin-top: 8px;
-        width: 140px;
-        height: 3px;
-        margin-left: 2px;
-        /* background: var(--primary-gradient); */
-        background-color: var(--text-light);
-      }
-    }
-
     .description {
       line-height: 30px;
       font-weight: 400;
