@@ -2,21 +2,23 @@
   --bg-primary: #182538;
   --bg-secondary: #1d2844;
 
-  --primary-color: #6736dd;
-  --secondary-color: #12c3f7;
+  --primary-color: #12c3f7;
+  --secondary-color: #6736dd;
 
-  --text-primary: white;
+  --text-light: white;
   --text-dark: black;
 
   --primary-font: "Playfair Display", serif;
   --secondary-font: "Source Sans Pro", sans-serif;
 
   --bg-gradient1: linear-gradient(
-    45deg,
-    var(--primary-color),
-    var(--secondary-color)
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
   );
   --bg-gradient2: linear-gradient(-45deg, #ffec61, #f321d7);
-  --bg-gradient3: linear-gradient(-45deg, #f403d1, #64b5f6);
-  --bg-gradient4: linear-gradient(-45deg, #24ff72, #9a4eff);
+  --bg-gradient3: linear-gradient(45deg, #ffec61 20%, #64b5f6, #f321d7);
+  --bg-gradient4: linear-gradient(45deg, #24ff72, var(--primary-color));
+
+  --primary-gradient: var(--bg-gradient4);
 }

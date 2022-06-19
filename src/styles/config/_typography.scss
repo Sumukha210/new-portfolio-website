@@ -1,0 +1,46 @@
+// primary font
+@mixin headingStyles {
+  font-family: var(--primary-font);
+  font-weight: bold;
+}
+
+.heading {
+  &-1 {
+    @include headingStyles();
+    font-size: 4.209rem; //67px
+    line-height: 89px;
+  }
+
+  &-2 {
+    @include headingStyles();
+    font-size: 3.157rem; // 50px
+    line-height: 66.65px;
+  }
+}
+
+// subtitle fonts
+@mixin subtitleStyles {
+  font-family: var(--secondary-font);
+}
+
+.subtitle {
+  &-1 {
+    font-size: 1.602rem; // 25px
+  }
+  &-2 {
+    font-size: 1.424rem; // 22px
+    line-height: 29px;
+  }
+  &-3 {
+    font-size: 1.266rem; // 20px
+  }
+  &-4 {
+    font-size: 1.125rem; // 18px
+    line-height: 22.63px;
+  }
+
+  &-5 {
+    font-size: 1rem; // 16px
+    line-height: 20.11px;
+  }
+}
