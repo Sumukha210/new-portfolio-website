@@ -1,0 +1,58 @@
+// TODO :- CUSTOM CONTAINER
+.smart-container {
+  @include breakpoint-down(sm) {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include breakpoint-up(sm) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include custom-breakpoint(sm, md) {
+    max-width: 540px;
+  }
+
+  @include custom-breakpoint(md, lg) {
+    max-width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include custom-breakpoint(lg, xl) {
+    max-width: 960px;
+  }
+
+  @include custom-breakpoint(xl, xxl) {
+    max-width: 1140px;
+  }
+
+  @include breakpoint-up(xxl) {
+    max-width: 1320px;
+  }
+}
+
+// TODO :- INNER CONTAINER
+.inner-container {
+  @include breakpoint-up(xxl) {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+// TODO :- COMPONENT SPACING CLASSES
+.margin-top {
+  margin-top: 5rem;
+}
+
+.component-inner-gap {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include breakpoint-down(sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
