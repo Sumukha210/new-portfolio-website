@@ -19,6 +19,11 @@
       font-size: clamp(2.2rem, 8vw, 2.8rem);
       line-height: clamp(48.65px, 10vw, 62px);
     }
+
+    @include breakpoint-down(xxs) {
+      font-size: clamp(2.2rem, 8vw, 2.8rem);
+      line-height: clamp(42.65px, 10vw, 62px);
+    }
   }
 
   &-2 {

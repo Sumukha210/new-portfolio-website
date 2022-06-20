@@ -1,7 +1,6 @@
 import useIsomorphicLayoutEffect from "@/utils/useIsomorphicEffect";
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { smokeSimulation } from "./SmokeEffect";
 import { Wrapper, Canvas, Container, Content } from "./HeroStyles";
 import Button from "@/elements/Button";
 import { useRouter } from "next/router";
@@ -10,9 +9,15 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const route = useRouter();
 
+  const lazyLoadSmokeEffect = async (canvas: any) => {
+    const { smokeSimulation } = await import("./SmokeEffect");
+    smokeSimulation(canvas);
+  };
+
   useIsomorphicLayoutEffect(() => {
-    if (canvasRef?.current) {
-      smokeSimulation(canvasRef.current);
+    if (canvasRef?.current && window.innerWidth >= 1200) {
+      console.log("canvas");
+      lazyLoadSmokeEffect(canvasRef.current);
     }
   }, []);
 

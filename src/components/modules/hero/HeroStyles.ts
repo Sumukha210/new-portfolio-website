@@ -19,6 +19,15 @@ export const Container = styled.div`
   right: 0%;
   z-index: 4;
   transform: translateY(-50%);
+
+  @media (max-width: 1199.98px) {
+    height: 100%;
+    top: 0%;
+    transform: initial;
+
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const Content = styled.div`
