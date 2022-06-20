@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
 
 export default Button;
 
-const CustomBtn = styled.button<CustomBtnProps>`
+export const CustomBtn = styled.button<CustomBtnProps>`
   border-radius: 30px;
   padding: ${props => (props.isOutlineBtn ? "1rem" : "18px")} 10px;
   min-width: 140px;
