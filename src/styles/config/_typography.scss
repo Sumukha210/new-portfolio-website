@@ -9,6 +9,16 @@
     @include headingStyles();
     font-size: 4.209rem; //67px
     line-height: 89px;
+
+    @include breakpoint-down(lg) {
+      font-size: 3.157rem; // 50px
+      line-height: 66.65px;
+    }
+
+    @include breakpoint-down(md) {
+      font-size: clamp(2.2rem, 8vw, 2.8rem);
+      line-height: clamp(48.65px, 10vw, 62px);
+    }
   }
 
   &-2 {
@@ -21,6 +31,11 @@
     @include headingStyles();
     font-size: 2.369rem; // 37px
     line-height: 50.52px;
+
+    @include breakpoint-down(sm) {
+      font-size: 1.8rem;
+      line-height: 48px;
+    }
   }
 }
 

@@ -26,16 +26,30 @@ export const Content = styled.div`
   position: relative;
   z-index: 3;
 
+  .caption {
+    @media (max-width: 575.98px) {
+      font-weight: 600;
+    }
+  }
+
   .title {
+    font-weight: bold;
     span {
       background: var(--primary-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 575.98px) {
+      margin-top: 10px;
     }
   }
 
   .subtitle {
     opacity: 0.7;
     font-weight: 600;
+    @media (max-width: 575.98px) {
+      font-weight: 500;
+    }
   }
 `;

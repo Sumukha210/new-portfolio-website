@@ -36,15 +36,27 @@
 
 // TODO :- INNER CONTAINER
 .inner-container {
-  @include breakpoint-up(xxl) {
+  margin-inline: auto;
+  @include breakpoint-up(xl) {
     width: 80%;
-    margin-inline: auto;
+  }
+
+  @include custom-breakpoint(md, xl) {
+    width: 90%;
+  }
+
+  @include breakpoint-down(md) {
+    width: 90%;
   }
 }
 
 // TODO :- COMPONENT SPACING CLASSES
 .margin-top {
   margin-top: 6rem;
+
+  @include breakpoint-down(sm) {
+    margin-top: 4rem;
+  }
 }
 
 .component-inner-gap {

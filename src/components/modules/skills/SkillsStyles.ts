@@ -8,6 +8,10 @@ export const Content = styled.div`
   color: var(--text-light);
   max-width: 90%;
 
+  @media (max-width: 991.98px) {
+    max-width: 100%;
+  }
+
   .left {
     .description {
       line-height: 30px;
@@ -27,6 +31,10 @@ export const Content = styled.div`
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem;
       align-items: center;
+
+      @media (max-width: 575.98px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
       .tool {
         background: var(--bg-secondary);

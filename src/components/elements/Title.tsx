@@ -31,7 +31,13 @@ const CustomTitle = styled.h2<CustomTitleProps>`
     width: ${props => `${props.lineWidth}px`};
     height: 3px;
     margin-left: 2px;
-    /* background: var(--primary-gradient); */
     background-color: var(--text-light);
+
+    @media (max-width: 575.98px) {
+      margin-top: 8px;
+      display: block;
+      width: 90px;
+      height: 4px;
+    }
   }
 `;

@@ -3,13 +3,16 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { smokeSimulation } from "./SmokeEffect";
 import { Wrapper, Canvas, Container, Content } from "./HeroStyles";
+import Button from "@/elements/Button";
+import { useRouter } from "next/router";
 
 const Hero = () => {
   const canvasRef = useRef(null);
+  const route = useRouter();
 
   useIsomorphicLayoutEffect(() => {
     if (canvasRef?.current) {
-      // smokeSimulation(canvasRef.current);
+      smokeSimulation(canvasRef.current);
     }
   }, []);
 
@@ -20,13 +23,19 @@ const Hero = () => {
         <div className="container">
           <div className="inner-container">
             <Content>
-              <h4 className="subtitle-4">Hello,</h4>
+              <h4 className="subtitle-4 caption">Hello,</h4>
               <h1 className="heading-1 title">
                 I’m <span>Sumukha K B</span>
               </h1>
               <h2 className="heading-1 subtitle">
                 I build things for the web.
               </h2>
+
+              <Button
+                name="Resume"
+                isOutlineBtn={true}
+                btnHandler={() => route.push("/resume")}
+              />
             </Content>
           </div>
         </div>

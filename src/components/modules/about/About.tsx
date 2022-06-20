@@ -2,16 +2,19 @@ import React from "react";
 import { Container, Wrapper } from "./AboutStyles";
 import NextImg from "next/image";
 import Title from "@/elements/Title";
+import Button from "@/elements/Button";
+import { useRouter } from "next/router";
 
 const About = () => {
+  const route = useRouter();
   return (
-    <Wrapper>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <Wrapper className="margin-top">
+      {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#000"
           fillOpacity="1"
           d="M0,128L48,128C96,128,192,128,288,117.3C384,107,480,85,576,101.3C672,117,768,171,864,181.3C960,192,1056,160,1152,133.3C1248,107,1344,85,1392,74.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-      </svg>
+      </svg> */}
 
       <div className="container">
         <div className="inner-container">
@@ -40,6 +43,20 @@ const About = () => {
                 worked with building custom wordpress websites. I’m also worked
                 with <b>Moonhive</b> company as intern for 3 months.
               </p>
+
+              <div className="btnContainer">
+                <Button
+                  name="Contact Me"
+                  marginTop="0rem"
+                  btnHandler={() => {}}
+                />
+                <Button
+                  name="Resume"
+                  marginTop="0rem"
+                  isOutlineBtn
+                  btnHandler={() => route.push("/resume")}
+                />
+              </div>
             </div>
           </Container>
         </div>

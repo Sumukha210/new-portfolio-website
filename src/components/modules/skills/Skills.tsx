@@ -4,7 +4,7 @@ import { Container, Content, Wrapper } from "./SkillsStyles";
 
 const Skills = () => {
   const tools = [
-    "JavaScript (ES6+)",
+    "JavaScript",
     "React.js",
     "Next.js",
     "Wordpress",

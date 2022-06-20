@@ -9,6 +9,12 @@ export const Container = styled.div`
   align-items: center;
   grid-column-gap: 4rem;
 
+  @media (max-width: 991.98px) {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 2rem;
+  }
+
   .right {
     color: var(--text-light);
 
@@ -18,7 +24,17 @@ export const Container = styled.div`
 
       &:last-of-type {
         margin-top: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 24px;
+      }
+    }
+
+    .btnContainer button {
+      @media (max-width: 575.98px) {
+        min-width: 130px;
+      }
+
+      &:last-of-type {
+        margin-left: 1rem;
       }
     }
   }
