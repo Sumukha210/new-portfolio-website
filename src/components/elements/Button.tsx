@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface CustomBtnProps {
   isOutlineBtn?: boolean;
@@ -44,6 +44,21 @@ const CustomBtn = styled.button<CustomBtnProps>`
     props.isOutlineBtn ? "transparent" : "var(--bg-gradient5)"};
   border: ${props =>
     props.isOutlineBtn ? "2px solid var(--secondary-color)" : "none"};
-
+  background-size: 300%;
+  background-position: left;
   margin-top: ${props => props.marginTop};
+  transition: all 0.5s ease-in;
+
+  @media (max-width: 575.98px) {
+    padding: ${props => (props.isOutlineBtn ? "14px" : "16px")} 10px;
+  }
+
+  &:hover {
+    background-position: right;
+    ${props =>
+      props.isOutlineBtn &&
+      css`
+        background: var(--secondary-color);
+      `}
+  }
 `;

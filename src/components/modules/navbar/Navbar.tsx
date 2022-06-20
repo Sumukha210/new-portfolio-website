@@ -6,12 +6,12 @@ const Navbar = () => {
   const [isMobileMenuOpen, setMobileOpen] = useState(false);
 
   return (
-    <Nav>
+    <Nav className={`${isMobileMenuOpen ? "activeMenu" : ""}`}>
       <div className="container">
         <div className="inner-container">
           <Container className={`${isMobileMenuOpen ? "mobileMenuOpen" : ""}`}>
             <div className="logo subtitle-1">
-              <span>KBS.</span>
+              <span>kbs.</span>
             </div>
 
             <div className="navMenu">

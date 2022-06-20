@@ -17,6 +17,18 @@ export const Nav = styled.div`
 
   background: var(--navBackgroundColor);
   backdrop-filter: var(--navBlur);
+
+  @media (max-width: 767.98px) {
+    &.activeMenu {
+      transition: all 0.5s ease-in;
+    }
+
+    &:not(.activeMenu) {
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px);
+      transition: all 0.5s ease-in;
+    }
+  }
 `;
 
 export const Container = styled.div`
@@ -28,9 +40,8 @@ export const Container = styled.div`
   width: 100%;
 
   .logo {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
 
     span {
       font-weight: bold;
@@ -128,6 +139,7 @@ export const Container = styled.div`
     }
   }
 
+  /* Mobile menu open */
   &.mobileMenuOpen {
     .navMenu {
       right: 0%;

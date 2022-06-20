@@ -30,7 +30,7 @@ export const Container = styled.div`
 
     .btnContainer button {
       @media (max-width: 575.98px) {
-        min-width: 130px;
+        min-width: 120px;
       }
 
       &:last-of-type {
@@ -41,5 +41,11 @@ export const Container = styled.div`
 
   .left {
     width: 100%;
+
+    @media (max-width: 991.98px) {
+      & > span {
+        height: 400px;
+      }
+    }
   }
 `;

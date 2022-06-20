@@ -16,7 +16,6 @@ const Hero = () => {
 
   useIsomorphicLayoutEffect(() => {
     if (canvasRef?.current && window.innerWidth >= 1200) {
-      console.log("canvas");
       lazyLoadSmokeEffect(canvasRef.current);
     }
   }, []);
