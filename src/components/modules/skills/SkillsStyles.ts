@@ -5,11 +5,8 @@ export const Wrapper = styled.div``;
 export const Container = styled.div``;
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2rem;
-  align-items: center;
   color: var(--text-light);
+  max-width: 90%;
 
   .left {
     .description {
@@ -23,20 +20,22 @@ export const Content = styled.div`
   }
 
   .right {
-    /* align-self: self-end; */
+    margin-top: 2rem;
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem;
       align-items: center;
 
       .tool {
         background: var(--bg-secondary);
         text-align: center;
-        padding: 2.5rem 10px;
+        padding: 1rem 10px;
         position: relative;
         overflow: hidden;
+        font-weight: 600;
+        /* border-radius: 30px; */
 
         span {
           display: inline-block;
@@ -61,10 +60,6 @@ export const Content = styled.div`
             width: 100%;
           }
         }
-
-        /* &:hover {
-          background: var(--bg-gradient1);
-        } */
       }
     }
   }

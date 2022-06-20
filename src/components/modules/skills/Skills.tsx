@@ -12,7 +12,7 @@ const Skills = () => {
     "Mongo DB",
     "TypeScript",
     "Figma",
-    "Gsap",
+    // "Gsap",
   ];
 
   return (
@@ -24,27 +24,27 @@ const Skills = () => {
               <div className="left">
                 <Title name="My Skills" />
                 <p className="subtitle-5 description">
-                  Since web techonologies always move at rapid page, i'm always
+                  Since web technologies always move at a rapid pace, I'm always
                   eager to learn different technologies and build projects using
                   those technologies.
                 </p>
                 <p className="subtitle-5 description">
-                  Also if the project that i'm working for company needs
-                  different tools, i'm willing to learn those things. When
-                  working with teams I tailor my approach to your needs. One
-                  tool does not work for everybody and I always aim to achieve
+                  Also, if the project that I'm working for the company needs
+                  different tools, I'm willing to learn those things. When
+                  working with teams, I tailor my approach to your needs. One
+                  tool does not work for everybody, and I always aim to achieve
                   the best results for who I’m currently working with.
                 </p>
                 <p className="subtitle-5 description">
-                  Here's just a few of the <b>Technologies / Tools</b> I’ve
-                  worked with in the past.
+                  Here's just a few of the Technologies / Tools I've worked with
+                  in the past:-
                 </p>
               </div>
 
               <div className="right">
                 <div className="grid">
                   {tools.map(tool => (
-                    <h4 className="subtitle-5 tool" key={tool}>
+                    <h4 className="smallText-2 tool" key={tool}>
                       <span> {tool}</span>
                     </h4>
                   ))}

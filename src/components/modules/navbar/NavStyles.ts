@@ -7,8 +7,8 @@ export const Nav = styled.div`
   width: 100%;
   z-index: 100;
 
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 `;
 
 export const Container = styled.div`

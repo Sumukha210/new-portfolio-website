@@ -25,9 +25,6 @@
 }
 
 // subtitle fonts
-@mixin subtitleStyles {
-  font-family: var(--secondary-font);
-}
 
 .subtitle {
   &-1 {
@@ -48,5 +45,19 @@
   &-5 {
     font-size: 1rem; // 16px
     line-height: 24.35px;
+  }
+}
+
+.smallText {
+  &-1 {
+    font-size: 0.875rem; // 14px
+  }
+
+  &-2 {
+    font-size: 0.75rem; // 12px
+  }
+
+  &-3 {
+    font-size: 0.65rem; // 12px
   }
 }
