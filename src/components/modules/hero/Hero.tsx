@@ -9,7 +9,7 @@ const Hero = () => {
 
   useIsomorphicLayoutEffect(() => {
     if (canvasRef?.current) {
-      // smokeSimulation(canvasRef.current);
+      smokeSimulation(canvasRef.current);
     }
   }, []);
 
