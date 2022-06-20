@@ -17,6 +17,15 @@ const About = () => {
         <div className="inner-container">
           <Container>
             <div className="left">
+              <NextImg
+                src={"/AboutSvg.svg"}
+                layout="responsive"
+                width="100%"
+                height="100%"
+              />
+            </div>
+
+            <div className="right">
               <Title name="About Myself" />
               <p className="subtitle-5 description">
                 Hello! i’m Sumukha k b, i have a passion for creating designs
@@ -31,15 +40,6 @@ const About = () => {
                 worked with building custom wordpress websites. I’m also worked
                 with <b>Moonhive</b> company as intern for 3 months.
               </p>
-            </div>
-
-            <div className="right">
-              <NextImg
-                src={"/AboutSvg.svg"}
-                layout="responsive"
-                width="100%"
-                height="100%"
-              />
             </div>
           </Container>
         </div>

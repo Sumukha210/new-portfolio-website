@@ -3,13 +3,54 @@ import React from "react";
 import { Container, Content, Wrapper } from "./SkillsStyles";
 
 const Skills = () => {
+  const tools = [
+    "JavaScript (ES6+)",
+    "React.js",
+    "Next.js",
+    "Wordpress",
+    "Node.js",
+    "Mongo DB",
+    "TypeScript",
+    "Figma",
+    "Gsap",
+  ];
+
   return (
     <Wrapper className="margin-top">
       <div className="container">
         <div className="inner-container">
           <Container>
-            <Title name="My Skills" />
-            <Content></Content>
+            <Content>
+              <div className="left">
+                <Title name="My Skills" />
+                <p className="subtitle-5 description">
+                  Since web techonologies always move at rapid page, i'm always
+                  eager to learn different technologies and build projects using
+                  those technologies.
+                </p>
+                <p className="subtitle-5 description">
+                  Also if the project that i'm working for company needs
+                  different tools, i'm willing to learn those things. When
+                  working with teams I tailor my approach to your needs. One
+                  tool does not work for everybody and I always aim to achieve
+                  the best results for who I’m currently working with.
+                </p>
+                <p className="subtitle-5 description">
+                  Here's just a few of the <b>Technologies / Tools</b> I’ve
+                  worked with in the past.
+                </p>
+              </div>
+
+              <div className="right">
+                <div className="grid">
+                  {tools.map(tool => (
+                    <h4 className="subtitle-5 tool" key={tool}>
+                      <span> {tool}</span>
+                    </h4>
+                  ))}
+                </div>
+              </div>
+            </Content>
           </Container>
         </div>
       </div>

@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div``;
 
 export const Container = styled.div`
+  margin-top: -3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-column-gap: 4rem;
 
-  .left {
+  .right {
     color: var(--text-light);
 
     .description {
@@ -20,5 +21,9 @@ export const Container = styled.div`
         margin-bottom: 2rem;
       }
     }
+  }
+
+  .left {
+    width: 100%;
   }
 `;

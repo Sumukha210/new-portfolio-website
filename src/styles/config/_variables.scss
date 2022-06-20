@@ -11,11 +11,7 @@
   --primary-font: "Playfair Display", serif;
   --secondary-font: "Source Sans Pro", sans-serif;
 
-  --bg-gradient1: linear-gradient(
-    90deg,
-    var(--secondary-color),
-    var(--primary-color)
-  );
+  --bg-gradient1: linear-gradient(90deg, #f321d7, var(--primary-color));
   --bg-gradient2: linear-gradient(-45deg, #ffec61, #f321d7);
   --bg-gradient3: linear-gradient(45deg, #ffec61 20%, #64b5f6, #f321d7);
   --bg-gradient4: linear-gradient(45deg, #24ff72, var(--primary-color));
