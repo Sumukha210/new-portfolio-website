@@ -6,6 +6,9 @@ export const Nav = styled.div`
   left: 0%;
   width: 100%;
   z-index: 100;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
 `;
 
 export const Container = styled.div`
@@ -13,7 +16,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   color: var(--text-light);
-  padding: 12px 0;
+  padding: 14px 0;
   width: 100%;
 
   .logo {
@@ -39,7 +42,7 @@ export const Container = styled.div`
       &:after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        bottom: -16px;
         left: 0%;
         width: 0%;
         height: 4px;
