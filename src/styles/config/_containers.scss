@@ -45,7 +45,7 @@
     width: 90%;
   }
 
-  @include breakpoint-down(md) {
+  @include breakpoint-down(sm) {
     width: 90%;
   }
 }
