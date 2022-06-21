@@ -45,12 +45,28 @@ const LeftSection = () => {
 export default LeftSection;
 
 const Wrapper = styled.div`
-  section {
-    display: flex;
-    align-items: center;
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    text-align: center;
+  }
 
-    &:not(:first-of-type) {
-      margin-top: 2rem;
+  section {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      &:not(:first-of-type) {
+        margin-top: 2rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      display: flex;
+      align-items: center;
+      &:not(:first-of-type) {
+        margin-top: 2rem;
+      }
     }
 
     div {
@@ -63,9 +79,23 @@ const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
 
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          margin-inline: auto;
+          margin-bottom: 1rem;
+        }
+
         svg {
           height: 30px;
           width: 30px;
+        }
+        @media (max-width: 575.98px) {
+          height: 50px;
+          width: 50px;
+
+          svg {
+            height: 20px;
+            width: 20px;
+          }
         }
       }
 

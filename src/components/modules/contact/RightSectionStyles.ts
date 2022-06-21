@@ -12,6 +12,16 @@ export const Wrapper = styled.div`
     section:last-of-type {
       margin-left: 1rem;
     }
+
+    @media (max-width: 575.98px) {
+      section:first-of-type {
+        margin-right: 0.5rem;
+      }
+
+      section:last-of-type {
+        margin-left: 0.5rem;
+      }
+    }
   }
 
   .responseText {

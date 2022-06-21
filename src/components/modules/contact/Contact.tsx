@@ -29,4 +29,8 @@ const Grid = styled.div`
   grid-template-columns: 0.5fr 1fr;
   grid-gap: 3rem;
   margin-top: 5rem;
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+  }
 `;
