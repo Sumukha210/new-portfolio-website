@@ -5,6 +5,7 @@ interface CustomBtnProps {
   isOutlineBtn?: boolean;
   isPrimaryGradient?: boolean;
   marginTop?: string;
+  size?: "normal" | "small";
 }
 
 interface ButtonProps extends CustomBtnProps {
@@ -18,12 +19,14 @@ const Button: React.FC<ButtonProps> = ({
   isPrimaryGradient = true,
   marginTop = "1rem",
   btnHandler,
+  size = "normal",
 }) => {
   return (
     <CustomBtn
+      size={size}
       onClick={btnHandler}
       marginTop={marginTop}
-      className="smallText-1"
+      className={`smallText-${size === "normal" ? "1" : "2"}`}
       isOutlineBtn={isOutlineBtn}
       isPrimaryGradient={isPrimaryGradient}>
       {name}
@@ -35,8 +38,6 @@ export default Button;
 
 export const CustomBtn = styled.button<CustomBtnProps>`
   border-radius: 30px;
-  padding: ${props => (props.isOutlineBtn ? "1rem" : "18px")} 10px;
-  min-width: 140px;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
@@ -49,9 +50,24 @@ export const CustomBtn = styled.button<CustomBtnProps>`
   margin-top: ${props => props.marginTop};
   transition: all 0.5s ease-in;
 
-  @media (max-width: 575.98px) {
-    padding: ${props => (props.isOutlineBtn ? "14px" : "16px")} 10px;
-  }
+  ${props =>
+    props.size === "normal"
+      ? css`
+          padding: ${props.isOutlineBtn ? "1rem" : "18px"} 10px;
+          min-width: 140px;
+
+          @media (max-width: 575.98px) {
+            padding: ${props.isOutlineBtn ? "14px" : "16px"} 10px;
+          }
+        `
+      : css`
+          padding: ${props.isOutlineBtn ? "14px" : "16px"} 10px;
+          min-width: 120px;
+
+          @media (max-width: 575.98px) {
+            padding: ${props.isOutlineBtn ? "12px" : "14px"} 10px;
+          }
+        `}
 
   &:hover {
     background-position: right;

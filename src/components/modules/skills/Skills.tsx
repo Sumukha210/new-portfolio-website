@@ -45,7 +45,7 @@ const Skills = () => {
               <div className="right">
                 <div className="grid">
                   {tools.map(tool => (
-                    <h4 className="smallText-2 tool" key={tool}>
+                    <h4 className="smallText-1 tool" key={tool}>
                       <span> {tool}</span>
                     </h4>
                   ))}

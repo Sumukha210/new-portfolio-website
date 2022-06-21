@@ -29,7 +29,11 @@ const Resume = () => {
             </div>
 
             <ResumeContainer>
-              <NextImage placeholder="blur" src={ResumeImage} />
+              <NextImage
+                placeholder="blur"
+                src={ResumeImage}
+                objectFit="cover"
+              />
             </ResumeContainer>
           </div>
         </div>

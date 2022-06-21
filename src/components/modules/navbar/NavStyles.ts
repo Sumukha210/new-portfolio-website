@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  --navBackgroundColor: rgba(0, 0, 0, 0.2);
+  --navBackgroundColor: rgba(0, 0, 0, 0.5);
   --navBlur: blur(6px);
 
   @media (max-width: 767.98px) {
