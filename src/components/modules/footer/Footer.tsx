@@ -31,11 +31,11 @@ const Footer = () => {
                 <AiFillGithub />
               </a>
 
-              <a href="">
+              <a href="https://api.whatsapp.com/send?phone=+91 9449022673">
                 <TbBrandWhatsapp />
               </a>
 
-              <a href="">
+              <a href="mailto:sumukhakb210@gmail.com?subject=subject&cc=cc@example.com">
                 <AiOutlineMail />
               </a>
             </div>
