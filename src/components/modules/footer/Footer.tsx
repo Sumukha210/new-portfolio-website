@@ -39,7 +39,7 @@ const Footer = () => {
                 <TbBrandWhatsapp />
               </a>
 
-              <a href="mailto:sumukhakb210@gmail.com?subject=subject&cc=cc@example.com">
+              <a href="mailto:sumukhakb210@gmail.com?subject=Contact us Form&cc=cc@example.com">
                 <AiOutlineMail />
               </a>
             </div>
