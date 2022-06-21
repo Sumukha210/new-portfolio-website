@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   --navBackgroundColor: rgba(0, 0, 0, 0.5);
-  --navBlur: blur(6px);
+  --navBlur: blur(2px);
 
   @media (max-width: 767.98px) {
     --navBackgroundColor: rgba(0, 0, 0, 0.95);
@@ -44,7 +44,7 @@ export const Container = styled.div`
     color: var(--secondary-color);
 
     span {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
