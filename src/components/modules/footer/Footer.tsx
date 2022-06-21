@@ -6,7 +6,7 @@ import { Grid, Wrapper } from "./FooterStyles";
 
 const Footer = () => {
   return (
-    <Wrapper>
+    <Wrapper className="margin-top">
       <div className="container">
         <div className="inner-container">
           <Grid>
@@ -23,11 +23,15 @@ const Footer = () => {
             <div className="right">
               <a
                 href="https://www.linkedin.com/in/sumukha-kb-1251a71b8/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 <GrLinkedinOption />
               </a>
 
-              <a href="https://github.com/Sumukha210" target="_blank">
+              <a
+                href="https://github.com/Sumukha210"
+                target="_blank"
+                rel="noreferrer">
                 <AiFillGithub />
               </a>
 

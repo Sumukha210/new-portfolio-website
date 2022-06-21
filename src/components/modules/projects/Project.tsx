@@ -73,6 +73,10 @@ const Grid = styled.div`
 
   @media (max-width: 767.98px) {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
     max-width: 100vw;
     width: 100vw;
     padding: 0 1rem;

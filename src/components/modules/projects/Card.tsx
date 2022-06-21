@@ -29,7 +29,7 @@ const Card: React.FC<ProjectTypes> = ({
         </div>
 
         <div className="content">
-          <h3 className="title subtitle-3">{title}</h3>
+          <h3 className="title subtitle-2">{title}</h3>
           <p className="description subtitle-5">{description}</p>
 
           <div className="btnContainer">

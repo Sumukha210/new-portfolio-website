@@ -6,13 +6,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Grid = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
   justify-content: space-between;
   align-items: center;
 
   .left {
-    flex: 1;
-
     color: var(--text-light);
     & > * {
       font-family: var(--primary-font);
@@ -24,7 +24,6 @@ export const Grid = styled.div`
   }
 
   .copyright {
-    flex: 1;
     color: var(--text-light);
     opacity: 0.8;
     & > * {
@@ -35,7 +34,7 @@ export const Grid = styled.div`
   .right {
     display: flex;
     align-items: center;
-    /* flex: 1; */
+    margin-left: auto;
 
     a {
       --svgRadius: 30px;
@@ -66,6 +65,31 @@ export const Grid = styled.div`
       }
 
       margin: 0 6px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .left {
+      order: 1;
+    }
+
+    .right {
+      order: 2;
+    }
+
+    .copyright {
+      order: 3;
+    }
+
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    .right {
+      margin-inline: auto;
     }
   }
 `;

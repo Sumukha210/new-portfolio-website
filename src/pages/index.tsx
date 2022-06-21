@@ -1,4 +1,5 @@
 import About from "@/modules/about/About";
+import Contact from "@/modules/contact/Contact";
 import Hero from "@/modules/hero/Hero";
 import Layout from "@/modules/Layout";
 import Project from "@/modules/projects/Project";
@@ -12,6 +13,7 @@ const MainPage = () => {
       <About />
       <Skills />
       <Project />
+      <Contact />
     </Layout>
   );
 };
