@@ -20,3 +20,7 @@ body {
   background: var(--bg-primary);
   font-family: var(--secondary-font);
 }
+
+.grecaptcha-badge {
+  display: none !important;
+}

@@ -14,6 +14,13 @@ export const Wrapper = styled.div`
     }
   }
 
+  .responseText {
+    margin-top: 1rem;
+    & > * {
+      font-weight: 600;
+    }
+  }
+
   section {
     flex: 1;
 

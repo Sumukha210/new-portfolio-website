@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Wrapper, SubmitBtn } from "./RightSectionStyles";
+import axios from "axios";
+import { responseTypes } from "@/utils/types";
 
 const RightSection = () => {
   const [isBtnDisabled, setBtnDisabled] = useState(false);
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [response, setResponse] = useState<responseTypes | null>(null);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const name = e.target[0];
     const email = e.target[1];
@@ -18,7 +23,36 @@ const RightSection = () => {
 
     setBtnDisabled(true);
 
-    console.log(name.value, email.value, message.value);
+    if (!executeRecaptcha) {
+      return;
+    }
+
+    try {
+      const token = await executeRecaptcha();
+      if (!token) {
+        setResponse({ message: "Failed to Send!!!", status: "Failed" });
+        return;
+      }
+
+      const result = await axios.post("/api/contactUs", {
+        token,
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      });
+
+      if (result.data) {
+        setResponse({
+          message: result.data.message,
+          status: result.data.status,
+        });
+      }
+      setBtnDisabled(false);
+    } catch (error) {
+      console.log(error);
+      setResponse({ message: "Failed to Send!!!", status: "Failed" });
+      setBtnDisabled(false);
+    }
   };
 
   return (
@@ -51,6 +85,16 @@ const RightSection = () => {
             cols={30}
             rows={10}></textarea>
         </section>
+
+        <div className="responseText">
+          <h3
+            className="subtitle-4"
+            style={{
+              color: response?.status === "Failed" ? "red" : "#24ff72",
+            }}>
+            {response?.message}
+          </h3>
+        </div>
 
         <div className="btnContainer">
           <SubmitBtn disabled={isBtnDisabled} type="submit" marginTop="2rem">
