@@ -9,16 +9,16 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const route = useRouter();
 
-  const lazyLoadSmokeEffect = async (canvas: any) => {
-    const { smokeSimulation } = await import("./SmokeEffect");
-    smokeSimulation(canvas);
-  };
+  // const lazyLoadSmokeEffect = async (canvas: any) => {
+  //   const { smokeSimulation } = await import("./SmokeEffect");
+  //   smokeSimulation(canvas);
+  // };
 
-  useIsomorphicLayoutEffect(() => {
-    if (canvasRef?.current && window.innerWidth >= 1200) {
-      lazyLoadSmokeEffect(canvasRef.current);
-    }
-  }, []);
+  // useIsomorphicLayoutEffect(() => {
+  //   if (canvasRef?.current && window.innerWidth >= 1200) {
+  //     lazyLoadSmokeEffect(canvasRef.current);
+  //   }
+  // }, []);
 
   return (
     <Wrapper>

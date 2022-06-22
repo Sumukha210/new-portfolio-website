@@ -1,19 +1,32 @@
+import React, { useRef } from "react";
 import About from "@/modules/about/About";
-import Contact from "@/modules/contact/Contact";
 import Hero from "@/modules/hero/Hero";
 import Layout from "@/modules/Layout";
 import Project from "@/modules/projects/Project";
 import Skills from "@/modules/skills/Skills";
-import React from "react";
+import dynamic from "next/dynamic";
+import { useOnScreen } from "@/utils/useOnScreen";
+
+const DynamicContactUsComponent = dynamic(
+  () => import("@/modules/contact/Contact"),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 const MainPage = () => {
+  const ContactRef = useRef(null);
+  const isIntersecting = useOnScreen(ContactRef, "200px");
+
   return (
     <Layout>
       <Hero />
       <About />
       <Skills />
       <Project />
-      <Contact />
+      <div ref={ContactRef}>
+        {isIntersecting && <DynamicContactUsComponent />}
+      </div>
     </Layout>
   );
 };

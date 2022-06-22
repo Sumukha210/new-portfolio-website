@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 20px 0;
   background: var(--bg-secondary);
+
+  position: absolute;
+  width: 100%;
 `;
 
 export const Grid = styled.div`

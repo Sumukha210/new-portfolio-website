@@ -16,7 +16,13 @@ const Card: React.FC<ProjectTypes> = ({
   return (
     <CustomCard>
       <figure>
-        <NextImage src={imageSrc} placeholder="blur" objectFit="cover" />
+        <NextImage
+          src={imageSrc}
+          placeholder="blur"
+          objectFit="cover"
+          layout="responsive"
+          alt={`${title} image`}
+        />
       </figure>
 
       <CardContent>
