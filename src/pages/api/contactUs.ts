@@ -17,10 +17,13 @@ export default async function handler(
     console.log("ReCaptcha response", response);
 
     if (response.data.success && response.data.score >= 0.5) {
-      //   sendMail(name, email, message);
+      sendMail(name, email, message);
       return res
         .status(200)
-        .json({ status: "Success", message: "Thank you for contacting me." });
+        .json({
+          status: "Success",
+          message: "Thank you for reaching out to me.",
+        });
     } else {
       return res.json({
         status: "Failed",

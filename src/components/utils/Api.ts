@@ -22,9 +22,11 @@ export const sendMail = async (
 ) => {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    // host: "smtp.ethereal.email",
+    host: "smtp.gmail.com",
     name: "Mailer",
     port: 587,
+    service: "gmail",
     secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // generated ethereal user
@@ -37,7 +39,7 @@ export const sendMail = async (
     let info = await transporter.sendMail({
       from: process.env.EMAIL_USER, // sender address
       to: "sumukhakb210@gmail.com", // list of receivers
-      subject: `${name} with the email of ${email} is contacted you!!`, // Subject line
+      subject: `${email} is contacted you from www.https://sumukhakb210.in website!!`, // Subject line
       text: "Reach out with you", // plain text body
       html: `
       <h3>Name:- ${name}</h3>

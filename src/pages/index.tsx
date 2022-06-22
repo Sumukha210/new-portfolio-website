@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import About from "@/modules/about/About";
 import Hero from "@/modules/hero/Hero";
 import Layout from "@/modules/Layout";
-import Project from "@/modules/projects/Project";
 import Skills from "@/modules/skills/Skills";
 import dynamic from "next/dynamic";
 import { useOnScreen } from "@/utils/useOnScreen";
 import SEO from "@/utils/SEO";
+import Project from "@/modules/projects/Project";
 
 const DynamicContactUsComponent = dynamic(
   () => import("@/modules/contact/Contact"),
@@ -20,8 +20,11 @@ const DynamicContactUsComponent = dynamic(
 );
 
 const MainPage = () => {
+  const bodyHeight = 800;
   const ContactRef = useRef(null);
-  const isIntersecting = useOnScreen(ContactRef, "200px");
+  const ProjectRef = useRef(null);
+  const isProjectIntersecting = useOnScreen(ProjectRef, `${bodyHeight / 2}px`);
+  const isContactIntersecting = useOnScreen(ContactRef, `${bodyHeight / 2}px`);
 
   return (
     <Layout>
@@ -30,8 +33,9 @@ const MainPage = () => {
       <About />
       <Skills />
       <Project />
+
       <div ref={ContactRef} id="contactSection">
-        {isIntersecting && <DynamicContactUsComponent />}
+        {isContactIntersecting && <DynamicContactUsComponent />}
       </div>
     </Layout>
   );
