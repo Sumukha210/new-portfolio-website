@@ -35,6 +35,8 @@ const Resume = () => {
                 placeholder="blur"
                 src={ResumeImage}
                 objectFit="cover"
+                layout="responsive"
+                alt="Resume Image"
               />
             </ResumeContainer>
           </div>

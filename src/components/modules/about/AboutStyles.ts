@@ -33,6 +33,11 @@ export const Container = styled.div`
         min-width: 120px;
       }
 
+      @media (max-width: 380.98px) {
+        min-width: 110px;
+        font-size: 12px;
+      }
+
       &:last-of-type {
         margin-left: 1rem;
       }

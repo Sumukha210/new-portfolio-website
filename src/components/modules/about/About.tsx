@@ -14,7 +14,11 @@ const About = () => {
         <div className="inner-container">
           <Container>
             <div className="left">
-              <NextImg src={AboutImage} />
+              <NextImg
+                src={AboutImage}
+                layout="responsive"
+                alt="About  Image"
+              />
             </div>
 
             <div className="right">

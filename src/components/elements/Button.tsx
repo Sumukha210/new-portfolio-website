@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       onClick={btnHandler}
       marginTop={marginTop}
-      className={`smallText-${size === "normal" ? "1" : "2"}`}
+      className={`smallText-${size === "normal" ? "1" : "2"} customBtn`}
       isOutlineBtn={isOutlineBtn}
       isPrimaryGradient={isPrimaryGradient}>
       {name}
