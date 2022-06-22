@@ -9,7 +9,7 @@ import AboutImage from "@/assets/AboutSvg.svg";
 const About = () => {
   const route = useRouter();
   return (
-    <Wrapper className="margin-top">
+    <Wrapper className="margin-top" id="aboutSection">
       <div className="container">
         <div className="inner-container">
           <Container>

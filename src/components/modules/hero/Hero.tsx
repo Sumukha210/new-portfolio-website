@@ -21,7 +21,7 @@ const Hero = () => {
   // }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id="heroSection">
       <Canvas ref={canvasRef}></Canvas>
       <Container>
         <div className="container">

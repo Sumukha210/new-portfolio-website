@@ -16,7 +16,7 @@ const Skills = () => {
   ];
 
   return (
-    <Wrapper className="margin-top">
+    <Wrapper className="margin-top" id="skillsSection">
       <div className="container">
         <div className="inner-container">
           <Container>

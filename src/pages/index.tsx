@@ -6,6 +6,7 @@ import Project from "@/modules/projects/Project";
 import Skills from "@/modules/skills/Skills";
 import dynamic from "next/dynamic";
 import { useOnScreen } from "@/utils/useOnScreen";
+import SEO from "@/utils/SEO";
 
 const DynamicContactUsComponent = dynamic(
   () => import("@/modules/contact/Contact"),
@@ -20,11 +21,12 @@ const MainPage = () => {
 
   return (
     <Layout>
+      <SEO />
       <Hero />
       <About />
       <Skills />
       <Project />
-      <div ref={ContactRef}>
+      <div ref={ContactRef} id="contactSection">
         {isIntersecting && <DynamicContactUsComponent />}
       </div>
     </Layout>

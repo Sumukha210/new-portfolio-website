@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import NextImage from "next/image";
 import ResumeImage from "@/assets/Final Resume.jpg";
+import SEO from "@/utils/SEO";
 
 const Resume = () => {
   const route = useRouter();
@@ -11,6 +12,7 @@ const Resume = () => {
   return (
     <>
       <Wrapper>
+        <SEO />
         <div className="container">
           <div className="inner-container">
             <div className="btnContainer">

@@ -47,7 +47,7 @@ const projects: ProjectTypes[] = [
 
 const Project = () => {
   return (
-    <Wrapper className="margin-top">
+    <Wrapper className="margin-top" id="projectSection">
       <div className="container">
         <div className="inner-container">
           <Title name="Projects" />
