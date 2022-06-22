@@ -12,7 +12,7 @@ const DynamicContactUsComponent = dynamic(
   () => import("@/modules/contact/Contact"),
   {
     loading: () => (
-      <p className="loadingText subtitle-3">
+      <p className="loadingText subtitle-4">
         Contact us Loading, please wait...
       </p>
     ),
