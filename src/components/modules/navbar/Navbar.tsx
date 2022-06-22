@@ -12,6 +12,9 @@ const Navbar = () => {
     smooth: true,
     offset: -100,
     isDynamic: true,
+    onClick() {
+      setMobileOpen(false);
+    },
   });
 
   return (
