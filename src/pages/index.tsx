@@ -11,7 +11,11 @@ import SEO from "@/utils/SEO";
 const DynamicContactUsComponent = dynamic(
   () => import("@/modules/contact/Contact"),
   {
-    loading: () => <p>Loading...</p>,
+    loading: () => (
+      <p className="loadingText subtitle-3">
+        Contact us Loading, please wait...
+      </p>
+    ),
   }
 );
 

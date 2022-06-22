@@ -24,3 +24,8 @@ body {
 .grecaptcha-badge {
   display: none !important;
 }
+
+.loadingText {
+  text-align: center;
+  color: var(--text-light);
+}
