@@ -22,8 +22,6 @@ const DynamicContactUsComponent = dynamic(
 const MainPage = () => {
   const bodyHeight = 800;
   const ContactRef = useRef(null);
-  const ProjectRef = useRef(null);
-  const isProjectIntersecting = useOnScreen(ProjectRef, `${bodyHeight / 2}px`);
   const isContactIntersecting = useOnScreen(ContactRef, `${bodyHeight / 2}px`);
 
   return (
