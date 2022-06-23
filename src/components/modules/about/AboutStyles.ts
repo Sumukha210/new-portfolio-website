@@ -15,6 +15,10 @@ export const Container = styled.div`
     grid-row-gap: 2rem;
   }
 
+  @media (max-width: 767.98px) {
+    grid-row-gap: 0rem;
+  }
+
   .right {
     color: var(--text-light);
 
@@ -47,9 +51,9 @@ export const Container = styled.div`
   .left {
     width: 100%;
 
-    @media (max-width: 991.98px) {
+    @media (min-width: 768px) and (max-width: 991.98px) {
       & > span {
-        height: 400px;
+        height: 400px !important;
       }
     }
   }

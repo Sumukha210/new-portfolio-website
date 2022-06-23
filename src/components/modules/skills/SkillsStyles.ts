@@ -6,10 +6,28 @@ export const Container = styled.div``;
 
 export const Content = styled.div`
   color: var(--text-light);
-  max-width: 90%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-column-gap: 4rem;
 
   @media (max-width: 991.98px) {
-    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 2rem;
+
+    .left {
+      order: 2;
+    }
+
+    .right {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    grid-row-gap: 2rem;
   }
 
   .left {
@@ -21,53 +39,36 @@ export const Content = styled.div`
         margin-top: 1rem;
       }
     }
+
+    ul {
+      margin-top: 1.5rem;
+      margin-left: 1rem;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 14px;
+      align-items: center;
+
+      @media (max-width: 380px) {
+        grid-row-gap: 14px;
+        grid-column-gap: 1.9rem;
+      }
+
+      li {
+        list-style-type: disclosure-closed;
+
+        &::marker {
+          color: var(--secondary-color);
+        }
+      }
+    }
   }
 
   .right {
-    margin-top: 2rem;
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem;
-      align-items: center;
-
-      @media (max-width: 575.98px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .tool {
-        background: var(--bg-secondary);
-        text-align: center;
-        padding: 1rem 10px;
-        position: relative;
-        overflow: hidden;
-        font-weight: 600;
-        /* border-radius: 30px; */
-
-        span {
-          display: inline-block;
-          position: relative;
-          z-index: 4;
-        }
-
-        &::before {
-          content: "";
-          width: 0%;
-          position: absolute;
-          top: 0%;
-          height: 100%;
-          background: var(--bg-gradient4);
-          transition: all 0.5s ease-out;
-          z-index: 1;
-          left: 0%;
-        }
-
-        &:hover {
-          &::before {
-            width: 100%;
-          }
-        }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      & > span {
+        height: 500px !important;
       }
     }
   }

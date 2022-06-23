@@ -1,18 +1,17 @@
 import Title from "@/elements/Title";
 import React from "react";
 import { Container, Content, Wrapper } from "./SkillsStyles";
+import NextImage from "next/image";
+import skillsImage from "@/assets/skills.svg";
 
 const Skills = () => {
   const tools = [
-    "JavaScript",
+    "JavaScript (ES6+)",
     "React.js",
     "Next.js",
     "Wordpress",
-    "Node.js",
     "Mongo DB",
     "TypeScript",
-    "Figma",
-    // "Gsap",
   ];
 
   return (
@@ -40,16 +39,21 @@ const Skills = () => {
                   Here&rsquo;s just a few of the Technologies / Tools I&rsquo;ve
                   worked with in the past:-
                 </p>
+                <ul>
+                  {tools.map(tool => (
+                    <li key={tool} className="smallText-1">
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="right">
-                <div className="grid">
-                  {tools.map(tool => (
-                    <h4 className="smallText-1 tool" key={tool}>
-                      <span> {tool}</span>
-                    </h4>
-                  ))}
-                </div>
+                <NextImage
+                  src={skillsImage}
+                  layout="responsive"
+                  alt="skills image"
+                />
               </div>
             </Content>
           </Container>
