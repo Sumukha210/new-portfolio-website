@@ -1,6 +1,5 @@
 import useIsomorphicLayoutEffect from "@/utils/useIsomorphicEffect";
 import React, { useRef } from "react";
-import styled from "styled-components";
 import { Wrapper, Canvas, Container, Content } from "./HeroStyles";
 import Button from "@/elements/Button";
 import { useRouter } from "next/router";
