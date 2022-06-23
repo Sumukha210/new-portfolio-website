@@ -18,7 +18,7 @@ const Hero = () => {
     if (canvasRef?.current && window.innerWidth >= 1200) {
       setTimeout(() => {
         lazyLoadSmokeEffect(canvasRef.current);
-      }, 1200);
+      }, 2000);
     }
   }, []);
 
