@@ -43,6 +43,9 @@ const Navbar = () => {
                   <Link {...scrollOptions("projectSection")}>Project</Link>
                 </li>
                 <li className="subtitle-5">
+                  <Link {...scrollOptions("blogSection")}>Blog</Link>
+                </li>
+                <li className="subtitle-5">
                   <Link {...scrollOptions("contactSection")}>Contact</Link>
                 </li>
               </ul>

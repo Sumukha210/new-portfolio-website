@@ -11,7 +11,7 @@ interface BlogProps {
 
 const Blog: React.FC<BlogProps> = ({ articles }) => {
   return (
-    <Wrapper className="margin-top">
+    <Wrapper className="margin-top" id="blogSection">
       <div className="container">
         <div className="inner-container">
           <Header>

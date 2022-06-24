@@ -134,6 +134,10 @@ export const Container = styled.div`
         ul {
           padding-top: 2.5rem;
           width: 90%;
+
+          li {
+            margin-bottom: 2.5rem;
+          }
         }
       }
     }
@@ -143,7 +147,7 @@ export const Container = styled.div`
   &.mobileMenuOpen {
     .navMenu {
       right: 0%;
-      transition: right 0.7s ease-out;
+      transition: right 0.55s ease-out;
     }
   }
 `;
