@@ -2,8 +2,8 @@ import Title from "@/elements/Title";
 import React from "react";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import styled from "styled-components";
-import LeftSection from "./LeftSection";
-import RightSection from "./RightSection";
+import LeftSection from "./leftSection/LeftSection";
+import RightSection from "./rightSection/RightSection";
 
 const Contact = () => {
   return (
@@ -11,9 +11,9 @@ const Contact = () => {
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTHA_SITE_KEY}
         scriptProps={{
-          async: false, // optional, default to false,
-          defer: true, // optional, default to false
-          appendTo: "body", // optional, default to "head", can be "head" or "body",
+          async: false,
+          defer: true,
+          appendTo: "body",
           nonce: undefined,
         }}>
         <div className="container">

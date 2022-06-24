@@ -3,6 +3,8 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Wrapper, SubmitBtn } from "./RightSectionStyles";
 import axios from "axios";
 import { responseTypes } from "@/utils/types";
+import InputField from "./InputField";
+import { getInputValues } from "./utils";
 
 const RightSection = () => {
   const [isBtnDisabled, setBtnDisabled] = useState(false);
@@ -11,13 +13,12 @@ const RightSection = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const name = e.target[0];
-    const email = e.target[1];
-    const message = e.target[2];
+
+    const { email, message, name } = getInputValues(e);
 
     [name, email, message].forEach(item => {
       if (item.validity.valid === false && item.validity.valid) {
-        return;
+        return null;
       }
     });
 
@@ -49,7 +50,6 @@ const RightSection = () => {
       }
       setBtnDisabled(false);
     } catch (error) {
-      console.log(error);
       setResponse({ message: "Failed to Send!!!", status: "Failed" });
       setBtnDisabled(false);
     }
@@ -59,32 +59,11 @@ const RightSection = () => {
     <Wrapper>
       <form onSubmit={handleSubmit}>
         <div className="flex">
-          <section>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              name="name"
-              required
-            />
-          </section>
-
-          <section>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              name="email"
-              required
-            />
-          </section>
+          <InputField name="name" />
+          <InputField name="email" type="email" />
         </div>
 
-        <section>
-          <textarea
-            name="message"
-            placeholder="Enter your message"
-            cols={30}
-            rows={10}></textarea>
-        </section>
+        <InputField name="message" />
 
         <div className="responseText">
           <h3
