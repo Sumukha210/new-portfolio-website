@@ -81,6 +81,10 @@ export const Container = styled.div`
 
       &:not(:first-of-type) {
         margin-left: 2rem;
+
+        @media (max-width: 991.98px) {
+          margin-left: 1.4rem;
+        }
       }
     }
   }
