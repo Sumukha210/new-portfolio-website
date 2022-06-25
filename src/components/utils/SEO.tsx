@@ -16,7 +16,7 @@ const SEO = () => {
       ? "https://www.sumukhakb210.in/"
       : "http://localhost:3000/";
   const formattedTitle = title;
-  const url = router.pathname === "/" ? "Home page" : router.pathname;
+  const url = router.pathname === "/" ? "/" : router.pathname;
   const canonical = url && url === "/" ? domain : domain + url;
   const featuredImage = domain + image;
   const date = new Date().toDateString();
