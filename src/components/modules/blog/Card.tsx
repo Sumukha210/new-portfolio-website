@@ -20,6 +20,7 @@ const Card: React.FC<ArticleTypes> = ({
             width="100%"
             objectFit="cover"
             src={cover_image}
+            alt={`${title} Image`}
           />
         ) : (
           ""

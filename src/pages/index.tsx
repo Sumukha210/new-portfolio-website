@@ -27,7 +27,7 @@ interface MainPageProps {
 }
 
 const MainPage: React.FC<MainPageProps> = ({ articles }) => {
-  const bodyHeight = 3000;
+  const bodyHeight = 3500;
   const ContactRef = useRef(null);
   const isContactIntersecting = useOnScreen(ContactRef, `${bodyHeight / 2}px`);
 
