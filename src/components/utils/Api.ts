@@ -57,7 +57,14 @@ export const sendMail = async (
 // save users data to spread sheeet
 export const saveDataToSpreadSheet = async values => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    // keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    credentials: {
+      client_email: process.env.GOOGLE_CLIENT_EMAIL,
+      private_key: process.env.GOOGLE_PRIVATE_KEY,
+      client_id: process.env.GOOGLE_CLIENT_ID,
+      token_url: "https://oauth2.googleapis.com/token",
+      type: "service_account",
+    },
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
