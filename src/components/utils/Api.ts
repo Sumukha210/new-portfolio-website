@@ -1,5 +1,6 @@
 import axios from "axios";
 import nodemailer from "nodemailer";
+import { google } from "googleapis";
 
 // verify
 export const verifyRecaptcha = async (token: string) => {
@@ -51,4 +52,29 @@ export const sendMail = async (
   } catch (error) {
     console.log("Failed to send email", error);
   }
+};
+
+// save users data to spread sheeet
+export const saveDataToSpreadSheet = async values => {
+  const auth = new google.auth.GoogleAuth({
+    keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    scopes: "https://www.googleapis.com/auth/spreadsheets",
+  });
+
+  // Create client instance for auth
+  const client = await auth.getClient();
+
+  // Instance of Google Sheets API
+  const googleSheets: any = google.sheets({ version: "v4", auth: client });
+
+  // Write row(s) to spreadsheet
+  await googleSheets.spreadsheets.values.append({
+    auth,
+    spreadsheetId: process.env.SPREADSHEET_ID,
+    range: "Sheet1",
+    valueInputOption: "RAW",
+    resource: {
+      values: [values],
+    },
+  });
 };
