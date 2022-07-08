@@ -24,7 +24,7 @@ const Resume = () => {
 
               <DownloadBtn
                 as="a"
-                href="/Final Resume.pdf"
+                href="/FINAL-RESUME.pdf"
                 download="Sumukha Resume">
                 Download
               </DownloadBtn>
