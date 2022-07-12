@@ -5,6 +5,7 @@ import Title from "@/elements/Title";
 import Button from "@/elements/Button";
 import { useRouter } from "next/router";
 import AboutImage from "@/assets/AboutSvg.svg";
+import { scroller } from "react-scroll";
 
 const About = () => {
   const route = useRouter();
@@ -41,7 +42,13 @@ const About = () => {
                 <Button
                   name="Contact Me"
                   marginTop="0rem"
-                  btnHandler={() => {}}
+                  btnHandler={() => {
+                    scroller.scrollTo("contactSection", {
+                      duration: 1500,
+                      delay: 100,
+                      smooth: true,
+                    });
+                  }}
                 />
                 <Button
                   name="Resume"
