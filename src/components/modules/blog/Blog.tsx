@@ -39,7 +39,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
   );
 };
 
-export default React.memo(Blog);
+export default Blog;
 
 const Wrapper = styled.div``;
 
