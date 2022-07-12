@@ -24,6 +24,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/sumukha-kb-1251a71b8/"
                 target="_blank"
+                aria-label="Linkedin"
                 rel="noreferrer">
                 <GrLinkedinOption />
               </a>
@@ -31,15 +32,20 @@ const Footer = () => {
               <a
                 href="https://github.com/Sumukha210"
                 target="_blank"
+                aria-label="Github"
                 rel="noreferrer">
                 <AiFillGithub />
               </a>
 
-              <a href="https://api.whatsapp.com/send?phone=+91 9449022673">
+              <a
+                aria-label="Whatsapp"
+                href="https://api.whatsapp.com/send?phone=+91 9449022673">
                 <TbBrandWhatsapp />
               </a>
 
-              <a href="mailto:sumukhakb210@gmail.com?subject=Contact us Form&cc=cc@example.com">
+              <a
+                aria-label="Mail"
+                href="mailto:sumukhakb210@gmail.com?subject=Contact us Form&cc=cc@example.com">
                 <AiOutlineMail />
               </a>
             </div>

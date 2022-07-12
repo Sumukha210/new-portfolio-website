@@ -20,6 +20,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
               <a
                 href="https://dev.to/sumukhakb210"
                 target="_blank"
+                aria-label="Read more articles on dev.to website"
                 rel="noreferrer">
                 <span>Read More</span>
                 <span>
@@ -38,7 +39,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
   );
 };
 
-export default Blog;
+export default React.memo(Blog);
 
 const Wrapper = styled.div``;
 

@@ -12,6 +12,7 @@ const Navbar = () => {
     smooth: true,
     offset: -100,
     isDynamic: true,
+    "aria-label": `Go to ${to} section`,
     onClick() {
       setMobileOpen(false);
     },
