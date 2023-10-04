@@ -1,6 +1,6 @@
+import Title from "@/elements/Title";
 import React from "react";
 import styled from "styled-components";
-import Title from "@/elements/Title";
 import Card from "./Card";
 import { projectLists } from "./ProjectLists";
 

@@ -6,15 +6,19 @@ export const CustomCard = styled.div`
   @media (max-width: 379.98px) {
     figure {
       & > span {
-        height: 250px !important;
+        height: 400px !important;
       }
     }
   }
 `;
 
 export const CardContent = styled.div`
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1rem;
   color: var(--text-light);
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: 575.98px) {
     padding: 1rem 1rem 1.5rem 1rem;

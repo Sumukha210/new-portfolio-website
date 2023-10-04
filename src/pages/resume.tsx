@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 import NextImage from "next/image";
-import ResumeImage from "@/assets/Final Resume.jpg";
+import ResumeImage from "@/assets/resume.jpg";
 import SEO from "@/utils/SEO";
 
 const Resume = () => {
@@ -24,7 +24,7 @@ const Resume = () => {
 
               <DownloadBtn
                 as="a"
-                href="/FINAL-RESUME.pdf"
+                href="/sumukha-resume.pdf"
                 download="Sumukha Resume">
                 Download
               </DownloadBtn>

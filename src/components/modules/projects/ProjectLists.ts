@@ -1,8 +1,8 @@
-import { ProjectTypes } from "./types";
 import canaraEveningCollege from "@/assets/canaraEveningCollege.png";
-import mangaloremath from "@/assets/mangaloremath.png";
 import ekart from "@/assets/ekart.png";
+import mangaloremath from "@/assets/mangaloremath.png";
 import platino from "@/assets/platino.png";
+import { ProjectTypes } from "./types";
 
 export const projectLists: ProjectTypes[] = [
   {
