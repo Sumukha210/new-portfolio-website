@@ -11,7 +11,7 @@ const Project = () => {
         <div className="inner-container">
           <Title name="Projects" />
           <Grid>
-            {projectLists.map(item => (
+            {projectLists.map((item) => (
               <Card {...item} key={item.title} />
             ))}
           </Grid>
@@ -27,8 +27,8 @@ const Wrapper = styled.div``;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 
   @media (max-width: 767.98px) {
     grid-template-columns: 1fr;

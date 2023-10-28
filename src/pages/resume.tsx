@@ -1,10 +1,8 @@
 import Button, { CustomBtn } from "@/elements/Button";
+import SEO from "@/utils/SEO";
 import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
-import NextImage from "next/image";
-import ResumeImage from "@/assets/resume.jpg";
-import SEO from "@/utils/SEO";
 
 const Resume = () => {
   const route = useRouter();
@@ -25,19 +23,19 @@ const Resume = () => {
               <DownloadBtn
                 as="a"
                 href="/sumukha-resume.pdf"
-                download="Sumukha Resume">
+                download="Sumukha Resume"
+              >
                 Download
               </DownloadBtn>
             </div>
 
             <ResumeContainer>
-              <NextImage
-                placeholder="blur"
-                src={ResumeImage}
-                objectFit="cover"
-                layout="responsive"
-                alt="Resume Image"
-              />
+              <iframe
+                src="/sumukha-resume.pdf"
+                width="100%"
+                height="600px"
+                title="PDF Viewer"
+              ></iframe>
             </ResumeContainer>
           </div>
         </div>
