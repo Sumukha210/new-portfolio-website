@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
+const RESUME_URL = "/Sumukha-Resume.docx.pdf";
+
 const Resume = () => {
   const route = useRouter();
 
@@ -20,18 +22,14 @@ const Resume = () => {
                 btnHandler={() => route.replace("/")}
               />
 
-              <DownloadBtn
-                as="a"
-                href="/sumukha-resume.pdf"
-                download="Sumukha Resume"
-              >
+              <DownloadBtn as="a" href={RESUME_URL} download="Sumukha Resume">
                 Download
               </DownloadBtn>
             </div>
 
             <ResumeContainer>
               <iframe
-                src="/sumukha-resume.pdf"
+                src={RESUME_URL}
                 width="100%"
                 height="600px"
                 title="PDF Viewer"
